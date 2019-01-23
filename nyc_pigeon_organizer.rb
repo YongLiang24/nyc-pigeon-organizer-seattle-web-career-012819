@@ -19,24 +19,24 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  data[:gender].each do |gender, type|
-    type.each do |bird_name|
-      key.each do |item|
-        if bird_name === item
-          hash_bird[item][:gender] << gender.to_s
+  data[:gender].each do |key1, v1|
+    v1.each do |name|
+      key.each do |info|
+        if name === info
+          hash_bird[info][:gender] << key1.to_s
         end
       end
     end
   end
-  data[:lives].each do |location, name|
-    name.each do |bird_name|
-      key.each do |item|
-        if bird_name === item
-          hash_bird[item][:lives] << location
+  data[:lives].each do |k1, v1|
+    v1.each do |name|
+      key.each do |info|
+        if name === info
+          hash_bird[info][:lives] << k1
         end
       end
     end
   end
 
-  return hash_bird 
+  return hash_bird
 end
